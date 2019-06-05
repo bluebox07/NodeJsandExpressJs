@@ -1,0 +1,60 @@
+// https://pugjs.org/api/getting-started.html
+h1 H1
+H2 H2
+h3 H3
+
+div
+    span Ho
+    span Go
+button My Btn
+a#myButton
+a.btn.btn-primary
+
+table
+    thead
+        tr
+            th ID
+            th Code
+            th Name
+    tbody
+        tr
+            td 1
+            td 123
+            td Keni
+ul
+    each val in [1,2,3,4,5,6]
+        li= val
+
+ol
+    each val, index in {1: 'one', 2: 'two'}
+        li= index+ " : "+ val
+
+- var values = ['a','b'];
+ul
+    each val in values.length ? values : ['There are no values']
+        li= val
+
+- var n = 0;
+ul
+    while n < 4
+        li= n++
+
+a(href="https://www.google.com/") Google
+
+div
+    a(class="button",href= "https://www.google.com/") Google
+
+div
+    input(
+        type="checkbox"
+        name="agreement"
+        checked
+        )
+    span SaveData
+
+p= 'This code is' + ' <escaped>!'
+
+p
+  = 'This code is <script>alert("Hello")</script>!'
+
+p != 'This code is <script>alert("Hello")</script>!' // Unescaped Buffered Code ¶
